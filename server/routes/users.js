@@ -5,11 +5,11 @@ var User = require('../models/user');
 var createUser = require('../modules/createUser');
 var mongoose = require('mongoose');
 //var genTeam = require('../modules/genTeam');
-var userArray = [];
 
 
 router.get('/', function(req, res){
-   for (var i=1; i<=20; i++){
+    var userArray = [];
+    for (var i=1; i<=20; i++){
        var newUser = new createUser();
        console.log(newUser);
        User.create(newUser, function(err, post){
